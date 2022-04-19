@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SavedLoansActivity">
+<ScrollView
+    android:layout_above="@+id/nav_botton"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="gone">
+
+        <!--  This is your template view -->
+        <com.google.android.ads.nativetemplates.TemplateView
+            android:id="@+id/my_template"
+            app:gnt_template_type="@layout/gnt_small_template_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/svaedLoansRecycler"
+        android:layout_below="@id/ad_container"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>
+    <LinearLayout
+        android:id="@+id/nav_botton"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation_menu" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorActivity"
+    >
+
+<ScrollView
+    android:id="@+id/scrollskrr"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_above="@+id/nav_cont">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+    <RelativeLayout
+        android:id="@+id/container_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TableLayout
+        android:id="@+id/container_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"
+        android:stretchColumns="1">
+
+        <TableRow
+            android:layout_height="60dp"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Car name"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <EditText
+                android:hint="Add title for reference"
+                android:textColorHint="#888181"
+                android:id="@+id/loanName"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_column="2"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:maxEms="20"
+                android:inputType="text"
+                android:maxLines="1"
+                android:background="@drawable/edittext_background"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+
+                />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Value"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <EditText
+                android:hint="Set amount borrowed"
+                android:textColorHint="#888181"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_column="2"
+                android:background="@drawable/edittext_background"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:inputType="number"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Down payment"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+
+            <EditText
+                android:id="@+id/deposit"
+                android:hint="Set deposit if required"
+                android:textColorHint="#888181"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_column="2"
+                android:background="@drawable/edittext_background"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:inputType="number"
+
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Monthly Interest (%)"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <EditText
+                android:hint="Set if charged monthly"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="#888181"
+                android:id="@+id/monthlyinterest"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_column="2"
+                android:background="@drawable/edittext_background"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:inputType="numberDecimal"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Annual Interest (%)"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <EditText
+                android:hint="Set if charged yearly"
+                android:textColorHint="#888181"
+                android:id="@+id/yearlyintereset"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_column="2"
+                android:background="@drawable/edittext_background"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:inputType="numberDecimal"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Number of Months"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <EditText
+                android:hint="Set if period is months"
+                android:textColorHint="#888181"
+                android:id="@+id/numberofmonths"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_column="2"
+                android:background="@drawable/edittext_background"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:inputType="number"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Number of Years"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <EditText
+                android:hint="Set if period is years"
+                android:inputType="number"
+                android:textColorHint="#888181"
+                android:id="@+id/numberofyears"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_column="2"
+                android:background="@drawable/edittext_background"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonCont"
+        android:layout_below="@id/container_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+    <Button
+        app:strokeColor="@color/colorAccent"
+        app:strokeWidth="1dp"
+        android:id="@+id/calculateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:onClick="onCalculateBtnClick"
+        android:layout_weight="1"
+       />
+        <Button
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="1dp"
+            android:id="@+id/resetBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="RESET"
+            android:onClick="onResetButtonClick"
+            android:layout_weight="1"
+          />
+    </LinearLayout>
+
+
+</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/container_one"
+        android:visibility="gone">
+
+        <!--  This is your template view -->
+        <com.google.android.ads.nativetemplates.TemplateView
+            android:id="@+id/my_template"
+            app:gnt_template_type="@layout/gnt_small_template_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    </LinearLayout>
+<RelativeLayout
+    android:id="@+id/container_results"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/ad_container"
+    android:visibility="gone"
+
+   >
+
+    <TableLayout
+        android:id="@+id/result_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginTop="16dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:text="Monthly Payment"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_column="1"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <TextView
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/resultMonthlyPayment"
+                android:layout_below="@id/amortizationBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Principal "
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_column="1"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <TextView
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/resultPrincipalPayment"
+                android:layout_below="@id/amortizationBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Monthly Interest Rate"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_column="1"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <TextView
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/resultInterest"
+                android:layout_below="@id/amortizationBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Annual Interest Rate"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_column="1"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <TextView
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/resultAnnual"
+                android:layout_below="@id/amortizationBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Months"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_column="1"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <TextView
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/resultMonths"
+                android:layout_below="@id/amortizationBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+
+
+    </TableLayout>
+
+    <LinearLayout
+        android:paddingRight="16dp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/result_container"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <Button
+        app:strokeColor="@color/colorAccent"
+        app:strokeWidth="1dp"
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:onClick="onSaveLoanBtnClick"
+        android:layout_weight="1"
+        />
+
+    <Button
+        app:strokeColor="@color/colorAccent"
+        app:strokeWidth="1dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/amortizationBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Details"
+        android:onClick="onAmortizationBtnClick"/>
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>
+</ScrollView>
+    <LinearLayout
+        android:id="@+id/nav_cont"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        >
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation_menu" />
+
+    </LinearLayout>
+</RelativeLayout>

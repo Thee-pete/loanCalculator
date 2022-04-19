@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zuture.apps.carloancalculator">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3609953011019731~5904982155" />
+        <activity
+            android:configChanges="screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeReminder"
+            android:parentActivityName="com.zuture.apps.carloancalculator.ReminderActivity"
+            android:name="com.zuture.apps.carloancalculator.SetReminderActivity" />
+
+        <activity
+            android:configChanges="screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.zuture.apps.carloancalculator.MainActivity"
+            android:name="com.zuture.apps.carloancalculator.ReminderActivity" />
+
+        <activity
+            android:configChanges="screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.zuture.apps.carloancalculator.MainActivity"
+            android:name="com.zuture.apps.carloancalculator.SavedLoansActivity" />
+
+        <activity
+            android:label="Amortization"
+            android:configChanges="screenSize|orientation"
+            android:name="com.zuture.apps.carloancalculator.AmortizationActivity" />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:configChanges="screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.zuture.apps.carloancalculator.MainActivity"
+            android:name="com.zuture.apps.carloancalculator.CalculatorActivity" />
+
+        <activity
+            android:configChanges="screenSize|orientation"
+            android:name="com.zuture.apps.carloancalculator.MainActivity"
+            android:theme="@style/AppTheme.Launcher"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.zuture.apps.carloancalculator.AlarmReminderProvider"
+            android:authorities="com.zuture.apps.carloancalculator"
+            android:exported="false" />
+
+        <service
+            android:name="com.zuture.apps.carloancalculator.ReminderAlarmService"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

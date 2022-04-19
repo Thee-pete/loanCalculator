@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AmortizationActivity"
+    android:padding="8dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/container_dets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_border"
+        android:padding="8dp">
+
+        <TableLayout
+            android:id="@+id/result_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="2"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:text="Car Name"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_column="1"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorText"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/detsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorText"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:text="Monthly Payment"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_column="1"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorText"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/detsMonthlyPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorText"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Principal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorText"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/detsPrincipalPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorText"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Monthly Interest Rate"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorText"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/detsInterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorText"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Annual Interest Rate"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorText"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/detsAnnualInterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorText"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Months"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorText"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/detsMonths"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorText"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+            </TableRow>
+
+
+        </TableLayout>
+    </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ad_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/container_dets"
+            android:visibility="gone">
+
+            <!--  This is your template view -->
+            <com.google.android.ads.nativetemplates.TemplateView
+                android:id="@+id/my_template"
+                app:gnt_template_type="@layout/gnt_small_template_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+
+        </LinearLayout>
+
+
+<ScrollView
+    android:orientation="vertical"
+    android:id="@+id/table_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/ad_container"
+    android:layout_marginTop="5dp">
+
+    <TableLayout
+        android:id="@+id/wizTbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:id="@+id/rowDets"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/monthNum"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

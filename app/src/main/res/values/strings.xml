@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Auto loan IQ</string>
+    <string name="add_reminder">Reminder</string>
+    <string name="details">Details</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="repeat">Repeat</string>
+    <string name="repeat_off">Off</string>
+    <string name="repeat_no">Repetition Interval </string>
+    <string name="repeat_type">Type of Repetitions</string>
+
+    <string name="action_discard_reminder">Discard Reminder</string>
+    <string name="action_save_reminder">Save Reminder</string>
+
+    <string name="editor_activity_title_new_reminder">Add Reminder Details</string>
+    <string name="editor_activity_title_edit_reminder">Edit Reminder</string>
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <string name="discard">Discard</string>
+
+    <string name="keep_editing">Keep Editing</string>
+    <string name="delete_dialog_msg">Delete this Reminder?</string>
+
+    <string name="delete">Delete</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="editor_delete_reminder_successful">Reminder deleted</string>
+
+    <string name="editor_delete_reminder_failed">Error with deleting reminder</string>
+
+    <string name="editor_insert_reminder_successful">Reminder saved</string>
+
+    <string name="editor_insert_reminder_failed">Error with saving reminder</string>
+
+    <string name="editor_update_reminder_successful">Reminder updated</string>
+
+    <string name="editor_update_reminder_failed">Error with updating reminder</string>
+
+    <string name="reminder_title">AlarmReminder</string>
+    <string name="no_remider">To add a reminder please calculate and save a loan and click on the reminder button on the Saved loans panel"</string>
+    <string name="no_loans">To save a loan please calculate and click on the save button"</string>
+    <string name="native_ad_unit">ca-app-pub-7529922414191318/1833517036</string>
+    <string name="inter_ad_unit">ca-app-pub-7529922414191318/8099063555</string>
+
+    <string name="advicetitleone">Understand your credit score</string>
+    <string name="advicetitletwo">Get financing quotes before you go to the dealership</string>
+    <string name="advicetitlethree">Keep the term as short as you can afford</string>
+    <string name="advicetitlefour">Put 20 percent down</string>
+    <string name="advicetitlefive">Pay for taxes and extras with cash</string>
+
+
+    <string name="adviceone">Unlike mortgages or a credit card, you can usually get a car loan even if you have pretty bad credit—you’ll just pay (a lot) more since banks can easily repossess the car</string>
+    <string name="advicetwo">Try online lenders. You complete a credit application and are presented with your interest rate and a max amount you can spend. </string>
+    <string name="advicethree">Shorter loan terms come with lower interest rates but higher monthly payments. And that’s what you want.</string>
+    <string name="advicefour">In addition to a short loan term, you can avoid a situation in which you owe more money than the car is worth by putting money down.</string>
+    <string name="advicefive">Do not finance the miscellaneous expenses involved in your vehicle purchase like extended warranties.</string>
+
+
+</resources>
